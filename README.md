@@ -1,14 +1,18 @@
 # ServiciosBancarios
 API REST para busqueda de servicios bancarios Banamex
 
-Pasos para usar el API
+## Importar espacio de trabajo en Postman (Cargado en este repositorio Github): 
 
-1.- Carga Base de datos con Servicios Bancarios Banamex
+       ServiciosBancarios/postman/ServiciosBancarios.postman_collection.json
+
+## Pasos para usar el API
+
+### 1.- Carga Base de datos con Servicios Bancarios Banamex
        
     - POST
       - http://localhost:8082/servicio/carga/servicios
       
-2.- Consultar los Servicios Bancarios disponibles al momento
+### 2.- Consultar los Servicios Bancarios disponibles al momento
 
     - GET
       - http://localhost:8082/servicio/listar
@@ -28,7 +32,7 @@ Pasos para usar el API
           
    
    
-2.- Ejecutar la busqueda del Servicio Bancario necesitado con alguno de los servicios expuestos
+### 2.- Ejecutar la busqueda del Servicio Bancario necesitado con alguno de los servicios expuestos
   
     - GET
       - Buscar por un lugar (Colonia, Avenida, Localidad, Direccion en Español, Direccion en Ingles)
