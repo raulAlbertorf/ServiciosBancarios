@@ -6,7 +6,6 @@ import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
-import org.json.JSONObject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -35,7 +34,6 @@ public class ServicioBancarioServiceImpl implements ServicioBancarioService {
 					.map(item -> item.replace("\"", "")).collect(Collectors.toList());
 			 
 			servicios.add(ServicioBancarioMapper.mapServicioBancario(servicio));
-//			repository.save(ServicioBancarioMapper.mapServicioBancario(servicio));
 			jsonP.delete(0, cierra);
 			abre = jsonP.indexOf("[");
 			cierra = jsonP.indexOf("]", abre + 1);
@@ -47,7 +45,6 @@ public class ServicioBancarioServiceImpl implements ServicioBancarioService {
 
 	@Override
 	public Optional<ServicioBancario> findById(Integer id) {
-		// TODO Auto-generated method stub
 		return repository.findById(id);
 	}
 
@@ -62,11 +59,6 @@ public class ServicioBancarioServiceImpl implements ServicioBancarioService {
 	}
 
 	@Override
-	public List<ServicioBancario> buscarPorDireccionEspannol(String direccionEspannol) {
-		return repository.buscarPorDireccionEspannol(direccionEspannol);
-	}
-
-	@Override
 	public List<ServicioBancario> buscarPorLugarCPEstado(String lugar, String codigoPostal, String estado) {
 		return repository.buscarPorLugarCPEstado(lugar, "C.P. "+codigoPostal, estado);
 	}
@@ -75,6 +67,16 @@ public class ServicioBancarioServiceImpl implements ServicioBancarioService {
 	public List<ServicioBancario> buscarPorLugarCPEstadoServicio(String lugar, String codigoPostal, String estado,
 			String servicio) {
 		return repository.buscarPorLugarCPEstadoServicio(lugar, "C.P. "+codigoPostal, estado, servicio);
+	}
+
+	@Override
+	public List<ServicioBancario> findByServicioDetalle(String servicioDetalle) {
+		return repository.findByServicioDetalle(servicioDetalle);
+	}
+
+	@Override
+	public List<String> listarServicios() {
+		return repository.listarServicios();
 	}
 	
 

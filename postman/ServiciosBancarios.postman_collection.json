@@ -1,0 +1,188 @@
+{
+	"info": {
+		"_postman_id": "577d8517-731e-4d3f-9803-6a5359889c0e",
+		"name": "ServiciosBancarios",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "01_CargaBaseDatosServiciosBancarios",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8082/servicio/carga/servicios",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"servicio",
+						"carga",
+						"servicios"
+					]
+				},
+				"description": "http://localhost:8082/servicio/carga/servicios"
+			},
+			"response": []
+		},
+		{
+			"name": "02_ListarServiciosDisponibles",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8082/servicio/listar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"servicio",
+						"listar"
+					]
+				},
+				"description": "http://localhost:8082/servicio/listar"
+			},
+			"response": []
+		},
+		{
+			"name": "03_BuscarPorLugarCPEstado",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8082/servicio/buscar/lugar/codigoPostal/estado?lugar=Papagayo&codigoPostal=82011&estado=Sinaloa",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"servicio",
+						"buscar",
+						"lugar",
+						"codigoPostal",
+						"estado"
+					],
+					"query": [
+						{
+							"key": "lugar",
+							"value": "Papagayo"
+						},
+						{
+							"key": "codigoPostal",
+							"value": "82011"
+						},
+						{
+							"key": "estado",
+							"value": "Sinaloa"
+						}
+					]
+				},
+				"description": "http://localhost:8082/servicio/buscar/lugar/codigoPostal/estado"
+			},
+			"response": []
+		},
+		{
+			"name": "04_BuscarPorLugarCPEstadoServicio",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8082/servicio/buscar/lugar/codigoPostal/estado/servicio?lugar=Papagayo&codigoPostal=82010&estado=Sinaloa&servicio=ATM",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"servicio",
+						"buscar",
+						"lugar",
+						"codigoPostal",
+						"estado",
+						"servicio"
+					],
+					"query": [
+						{
+							"key": "lugar",
+							"value": "Papagayo"
+						},
+						{
+							"key": "codigoPostal",
+							"value": "82010"
+						},
+						{
+							"key": "estado",
+							"value": "Sinaloa"
+						},
+						{
+							"key": "servicio",
+							"value": "ATM"
+						}
+					]
+				},
+				"description": "http://localhost:8082/servicio/buscar/lugar/codigoPostal/estado?lugar=Papagayo&codigoPostal=82011&estado=Sinaloa"
+			},
+			"response": []
+		},
+		{
+			"name": "05_BuscarPorLugar",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8082/servicio/buscar?lugar=Av. Ejercito Nacional",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"servicio",
+						"buscar"
+					],
+					"query": [
+						{
+							"key": "lugar",
+							"value": "Av. Ejercito Nacional"
+						}
+					]
+				},
+				"description": "http://localhost:8082/servicio"
+			},
+			"response": []
+		},
+		{
+			"name": "06_BuscarPorTipoServicio",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8082/servicio/buscar/servicio?servicio=ATM",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"servicio",
+						"buscar",
+						"servicio"
+					],
+					"query": [
+						{
+							"key": "servicio",
+							"value": "ATM"
+						}
+					]
+				},
+				"description": "http://localhost:8082/servicio/buscar/servicio?servicio=ATM"
+			},
+			"response": []
+		}
+	]
+}
